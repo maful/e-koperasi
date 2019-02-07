@@ -11,3 +11,10 @@ Sitem yang memanajemen setoran dan penarikan tabungan dengan jenis Tabungan Suka
 - Migrasi Database, jalankan perintah `php artisan migrate`
 - Membuat contoh data, jalankan perintah `php artisan db:seed`
 - Menjalankan aplikasi, jalankan perintah `php artisan serve`
+
+## Kredensial
+
+```
+Email : ekoperasi@gmail.com
+Password : secret
+```
