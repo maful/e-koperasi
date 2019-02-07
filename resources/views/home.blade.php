@@ -1,23 +1,20 @@
 @extends('layouts.app')
 
-@section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Dashboard</div>
+@section('page-title', 'Dashboard')
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    You are logged in!
+@section('content-app')
+{{-- <div class="row row-cards">
+    <div class="col-6 col-sm-4 col-lg-2">
+        <div class="card">
+            <div class="card-body p-3 text-center">
+                <div class="text-right text-green">
+                    6%
+                    <i class="fe fe-chevron-up"></i>
                 </div>
+                <div class="h1 m-0">43</div>
+                <div class="text-muted mb-4">New Tickets</div>
             </div>
         </div>
     </div>
-</div>
+</div> --}}
 @endsection
