@@ -23,7 +23,7 @@
     <script src="{{ asset('js/require.min.js') }}"></script>
     <script>
         requirejs.config({
-            baseUrl: '.'
+            baseUrl: "{{ URL::to('/') }}"
         });
     </script>
     <!-- Dashboard Core -->
