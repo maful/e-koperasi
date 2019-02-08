@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="page">
-    <div class="page-main">
+    <div class="flex-fill">
         @include('shared.header')
         <div class="my-3 my-md-5">
             <div class="container">
