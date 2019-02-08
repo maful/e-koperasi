@@ -19,4 +19,20 @@ class Member extends Model
     {
         return $this->hasOne('App\Models\Saving', 'anggota_id');
     }
+
+    /**
+     * Get the deposits for the member.
+     */
+    public function deposits()
+    {
+        return $this->hasMany('App\Models\Deposit', 'anggota_id');
+    }
+
+    /**
+     * Get the savings history for the member.
+     */
+    public function savings_history()
+    {
+        return $this->hasMany('App\Models\SavingHistory', 'anggota_id');
+    }
 }

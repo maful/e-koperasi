@@ -22,4 +22,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::middleware(['auth'])->group(function () {
     Route::get('members/get-json', 'MemberController@jsonMembers');
     Route::resource('members', 'MemberController');
+
+    Route::get('deposits/get-json', 'DepositController@jsonDeposits');
+    Route::resource('deposits', 'DepositController')->only([
+        'index', 'create', 'store', 'show'
+    ]);
 });
