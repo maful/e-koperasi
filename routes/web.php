@@ -27,4 +27,9 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('deposits', 'DepositController')->only([
         'index', 'create', 'store', 'show'
     ]);
+
+    Route::get('withdrawals/get-json', 'WithdrawalController@jsonWithdrawals');
+    Route::resource('withdrawals', 'WithdrawalController')->only([
+        'index', 'create', 'store', 'show'
+    ]);
 });

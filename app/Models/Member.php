@@ -29,6 +29,14 @@ class Member extends Model
     }
 
     /**
+     * Get the withdrawals for the member.
+     */
+    public function withdrawals()
+    {
+        return $this->hasMany('App\Models\Withdrawal', 'anggota_id');
+    }
+
+    /**
      * Get the savings history for the member.
      */
     public function savings_history()

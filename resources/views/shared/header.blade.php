@@ -50,7 +50,7 @@
                         <a href="{{ route('deposits.index') }}" class="nav-link"><i class="fe fe-dollar-sign"></i> Setoran</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link"><i class="fe fe-hash"></i> Withdraw</a>
+                        <a href="{{ route('withdrawals.index') }}" class="nav-link"><i class="fe fe-hash"></i> Withdraw</a>
                     </li>
                 </ul>
             </div>
