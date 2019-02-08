@@ -32,4 +32,7 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('withdrawals', 'WithdrawalController')->only([
         'index', 'create', 'store', 'show'
     ]);
+
+    Route::get('mutations', 'MutationController@index');
+    Route::get('mutations/check-mutations', 'MutationController@check_mutations');
 });

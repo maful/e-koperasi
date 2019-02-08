@@ -52,6 +52,9 @@
                     <li class="nav-item">
                         <a href="{{ route('withdrawals.index') }}" class="nav-link"><i class="fe fe-hash"></i> Withdraw</a>
                     </li>
+                    <li class="nav-item">
+                        <a href="{{ url('mutations') }}" class="nav-link"><i class="fe fe-printer"></i> List Mutasi</a>
+                    </li>
                 </ul>
             </div>
         </div>
