@@ -18,3 +18,8 @@ Route::get('/', function () {
 Auth::routes(['register' => false, 'reset' => false, 'verify' => false]);
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('members/get-json', 'MemberController@jsonMembers');
+    Route::resource('members', 'MemberController');
+});

@@ -43,7 +43,10 @@
                     <li class="nav-item">
                         <a href="{{ route('home') }}" class="nav-link"><i class="fe fe-home"></i> Beranda</a>
                     </li>
-                    <li class="nav-item dropdown">
+                    <li class="nav-item">
+                        <a href="{{ route('members.index') }}" class="nav-link"><i class="fe fe-users"></i> Anggota</a>
+                    </li>
+                    <li class="nav-item">
                         <a href="#" class="nav-link"><i class="fe fe-dollar-sign"></i> Setoran</a>
                     </li>
                     <li class="nav-item">
