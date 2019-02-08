@@ -39,6 +39,9 @@
     <script src="{{ asset('plugins/input-mask/plugin.js') }}"></script>
     <!-- Datatables Plugin -->
     <script src="{{ asset('plugins/datatables/plugin.js') }}"></script>
+    <!-- Datepicker Plugin -->
+    <link href="{{ asset('plugins/bootstrap-datepicker/css/bootstrap-datepicker.min.css') }}" rel="stylesheet" />
+    <script src="{{ asset('plugins/bootstrap-datepicker/plugin.js') }}"></script>
 
     @yield('css')
 </head>
