@@ -17,12 +17,6 @@
                         <a class="dropdown-item" href="{{ url('profile') }}">
                             <i class="dropdown-icon fe fe-user"></i> Profile
                         </a>
-                        <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
-                            <i class="dropdown-icon fe fe-log-out"></i> Logout
-                        </a>
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                            @csrf
-                        </form>
                     </div>
                 </div>
             </div>
@@ -60,6 +54,13 @@
                     </li>
                     <li class="nav-item">
                         <a href="{{ url('profile') }}" class="nav-link"><i class="fe fe-user"></i> Profil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ route('logout') }}" class="nav-link" onclick="event.preventDefault();document.getElementById('logout-form').submit();"><i class="fe fe-log-out"></i> Keluar</a>
+
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form>
                     </li>
                 </ul>
             </div>
