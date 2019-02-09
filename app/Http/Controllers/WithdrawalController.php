@@ -49,10 +49,10 @@ class WithdrawalController extends Controller
         $balance_check = Saving::whereAnggotaId($request->anggota)->first();
         if ($balance_check) {
             if ($request->jumlah > $balance_check->saldo) {
-                return redirect()->route('withdrawals.create')->with('message', 'Saldo tidak mencukupi !');;
+                return redirect()->route('withdrawals.create')->with('message', 'Saldo tidak mencukupi !');
             }
         } else {
-            return redirect()->route('withdrawals.create')->with('message', 'Saldo tidak mencukupi !');;
+            return redirect()->route('withdrawals.create')->with('message', 'Saldo tidak mencukupi !');
         }
 
         DB::transaction(function () use ($request) {
