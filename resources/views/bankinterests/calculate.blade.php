@@ -58,7 +58,7 @@
             <div class="card-header">
                 <h3 class="card-title">Riwayat Bunga Tabungan</h3>
                 <div class="card-options">
-                    <a href="{{ route('members.create') }}" class="btn btn-sm btn-pill btn-secondary"><i class="fe fe-refresh-cw mr-2"></i>Refresh</a>
+                    <a href="javascript:void(0)" id="reload-table" class="btn btn-sm btn-pill btn-secondary"><i class="fe fe-refresh-cw mr-2"></i>Refresh</a>
                 </div>
             </div>
             <div class="table-responsive">
@@ -67,6 +67,7 @@
                         <tr>
                             <th class="w-1">No.</th>
                             <th>Periode</th>
+                            <th>Saldo Terendah</th>
                             <th>Bunga</th>
                         </tr>
                     </thead>
@@ -79,7 +80,7 @@
 
 @section('js')
 <script>
-require(['jquery'], function ($) {
+require(['datatables', 'jquery'], function(datatable, $) {
     $(document).ready(function () {
 
         $('#btn-check-interest').click(function(e) {
@@ -107,6 +108,38 @@ require(['jquery'], function ($) {
                 });
             }
         });
+    });
+
+    var oTable = $('#datatable').DataTable({
+        lengthChange: false,
+        serverSide: true,
+        ajax: '{{ url('bankinterests/get-history-interests/' . $member->id) }}',
+        columns: [
+            { data: 'DT_RowIndex', name: 'DT_RowIndex' },
+            { data: 'periode', name: 'periode' },
+            { data: 'saldo_terendah', name: 'saldo_terendah' },
+            { data: 'nominal_bunga', name: 'nominal_bunga' },
+        ],
+        language: {
+            "url": 'https://cdn.datatables.net/plug-ins/1.10.19/i18n/Indonesian.json'
+        },
+        columnDefs: [
+            {
+                targets: [0],
+                className: "text-center"
+            },
+            {
+                targets: [2],
+                className: "text-right"
+            },
+            {
+                targets: [3],
+                className: "text-right"
+            }
+        ]
+    });
+    $("#reload-table").click(function() {
+        oTable.ajax.reload(null, false);
     });
 });
 </script>

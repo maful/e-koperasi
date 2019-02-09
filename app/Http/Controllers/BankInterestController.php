@@ -125,4 +125,21 @@ class BankInterestController extends Controller
             ->rawColumns(['action'])
             ->toJson();
     }
+
+    public function jsonHistoryInterests($id)
+    {
+        $interests = BankInterest::where('anggota_id', $id)->orderBy('id', 'desc')->get();
+        return DataTables::of($interests)
+            ->addIndexColumn()
+            ->addColumn('periode', function($interest) {
+                return month_id($interest->bulan) . ' ' . $interest->tahun;
+            })
+            ->editColumn('nominal_bunga', function($interest) {
+                return format_rupiah($interest->nominal_bunga);
+            })
+            ->editColumn('saldo_terendah', function($interest) {
+                return format_rupiah($interest->saldo_terendah);
+            })
+            ->toJson();
+    }
 }
