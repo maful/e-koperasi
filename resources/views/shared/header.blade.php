@@ -14,7 +14,7 @@
                     </span>
                     </a>
                     <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                        <a class="dropdown-item" href="#">
+                        <a class="dropdown-item" href="{{ url('profile') }}">
                             <i class="dropdown-icon fe fe-user"></i> Profile
                         </a>
                         <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
@@ -57,6 +57,9 @@
                     </li>
                     <li class="nav-item">
                         <a href="{{ url('bankinterests') }}" class="nav-link"><i class="fe fe-box"></i> Hitung Bunga</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ url('profile') }}" class="nav-link"><i class="fe fe-user"></i> Profil</a>
                     </li>
                 </ul>
             </div>

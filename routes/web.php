@@ -20,6 +20,10 @@ Auth::routes(['register' => false, 'reset' => false, 'verify' => false]);
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::middleware(['auth'])->group(function () {
+    Route::get('profile', 'ProfileController@index');
+    Route::get('profile/edit', 'ProfileController@edit');
+    Route::patch('profile/{user}', 'ProfileController@update');
+
     Route::get('members/get-json', 'MemberController@jsonMembers');
     Route::resource('members', 'MemberController');
 
