@@ -43,4 +43,12 @@ class Member extends Model
     {
         return $this->hasMany('App\Models\SavingHistory', 'anggota_id');
     }
+
+    /**
+     * Get the bank interest for the member.
+     */
+    public function bank_interests()
+    {
+        return $this->hasMany('App\Models\BankInterest', 'anggota_id');
+    }
 }

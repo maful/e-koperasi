@@ -55,6 +55,9 @@
                     <li class="nav-item">
                         <a href="{{ url('mutations') }}" class="nav-link"><i class="fe fe-printer"></i> List Mutasi</a>
                     </li>
+                    <li class="nav-item">
+                        <a href="{{ url('bankinterests') }}" class="nav-link"><i class="fe fe-box"></i> Hitung Bunga</a>
+                    </li>
                 </ul>
             </div>
         </div>

@@ -115,5 +115,20 @@ $(document).ready(function() {
       format: 'yyyy-mm-dd',
       language: 'id',
     });
+
+    $('#onlmonth').datepicker({
+      autoclose: true,
+      format: 'mm',
+      minViewMode: 'months',
+      language: 'id',
+    });
+
+    $('#onlyear').datepicker({
+      autoclose: true,
+      format: 'yyyy',
+      minViewMode: 'years',
+      endDate: new Date(),
+      language: 'id',
+    });
   });
 });

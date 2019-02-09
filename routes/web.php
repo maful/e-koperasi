@@ -35,4 +35,10 @@ Route::middleware(['auth'])->group(function () {
 
     Route::get('mutations', 'MutationController@index');
     Route::get('mutations/check-mutations', 'MutationController@check_mutations');
+
+    Route::get('bankinterests', 'BankInterestController@index');
+    Route::get('bankinterests/calculate/{member}', 'BankInterestController@calculate');
+    Route::get('bankinterests/get-members', 'BankInterestController@jsonMembers');
+    Route::get('bankinterests/check-interest', 'BankInterestController@check_interest');
+    Route::post('bankinterests', 'BankInterestController@store');
 });
