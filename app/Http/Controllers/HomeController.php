@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\SavingHistory;
 
 class HomeController extends Controller
 {
@@ -23,6 +24,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $mutations = SavingHistory::whereDate('created_at', \Carbon\Carbon::today())
+                                    ->take(5)
+                                    ->latest()
+                                    ->get();
+
+        return view('home', compact('mutations'));
     }
 }
