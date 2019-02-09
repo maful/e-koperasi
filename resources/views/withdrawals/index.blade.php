@@ -10,19 +10,29 @@
                     <a href="{{ route('withdrawals.create') }}" class="btn btn-sm btn-pill btn-primary">Tambah Penarikan</a>
                 </div>
             </div>
-            <div class="table-responsive">
-                <table class="table card-table table-vcenter text-nowrap" id="datatable">
-                    <thead>
-                        <tr>
-                            <th class="w-1">No.</th>
-                            <th>Anggota</th>
-                            <th>Jumlah</th>
-                            <th>Keterangan</th>
-                            <th>Tanggal</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                </table>
+            <div class="card-body">
+                @if (session('success'))
+                    <div class="alert alert-icon alert-success alert-dismissible" role="alert">
+                        <i class="fe fe-check mr-2" aria-hidden="true"></i>
+                        <button type="button" class="close" data-dismiss="alert"></button>
+                        {{ session('success') }}
+                    </div>
+                @endif
+
+                <div class="table-responsive">
+                    <table class="table card-table table-vcenter text-nowrap" id="datatable">
+                        <thead>
+                            <tr>
+                                <th class="w-1">No.</th>
+                                <th>Anggota</th>
+                                <th>Jumlah</th>
+                                <th>Keterangan</th>
+                                <th>Tanggal</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
             </div>
         </div>
     </div>

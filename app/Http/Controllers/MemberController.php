@@ -51,7 +51,7 @@ class MemberController extends Controller
         $member->alamat = $request->alamat;
         $member->save();
 
-        return redirect('members');
+        return redirect('members')->with('success', 'Data Anggota berhasil disimpan.');
     }
 
     /**
@@ -100,7 +100,7 @@ class MemberController extends Controller
         $member->alamat = $request->alamat;
         $member->save();
 
-        return redirect('members');
+        return redirect('members')->with('success', 'Data Anggota berhasil diubah.');
     }
 
     /**
@@ -114,7 +114,7 @@ class MemberController extends Controller
         $member = Member::findOrFail($id);
         $member->delete();
 
-        return redirect('members');
+        return redirect('members')->with('success', 'Data Anggota berhasil dihapus.');
     }
 
     public function jsonMembers()

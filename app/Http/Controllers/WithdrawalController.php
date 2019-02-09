@@ -82,7 +82,7 @@ class WithdrawalController extends Controller
 
         });
 
-        return redirect()->route('withdrawals.index');
+        return redirect()->route('withdrawals.index')->with('success', 'Data Withdrawal berhasil disimpan.');
     }
 
     /**

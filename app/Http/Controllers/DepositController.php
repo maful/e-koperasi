@@ -77,7 +77,7 @@ class DepositController extends Controller
 
         });
 
-        return redirect()->route('deposits.index');
+        return redirect()->route('deposits.index')->with('success', 'Data Setoran berhasil disimpan.');
     }
 
     /**
