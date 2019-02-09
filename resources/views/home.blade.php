@@ -14,6 +14,7 @@
                     <thead>
                         <tr>
                             <th class="w-1">No.</th>
+                            <th>Anggota</th>
                             <th>Tanggal</th>
                             <th>Keterangan</th>
                             <th class="text-right">Debet</th>
@@ -26,12 +27,18 @@
                         @forelse ($mutations as $mutation)
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
+                                <td>
+                                    <div>{{ $mutation->member->nama }}</div>
+                                    <div class="small text-muted">
+                                        NIK: {{ $mutation->member->nik }}
+                                    </div>
+                                </td>
                                 <td>{{ $mutation->tanggal }}</td>
                                 <td>{{ $mutation->keterangan }}</td>
                                 <td class="text-right">{{ format_rupiah($mutation->debet) }}</td>
                                 <td class="text-right">{{ format_rupiah($mutation->kredit) }}</td>
                                 <td class="text-right">{{ format_rupiah($mutation->saldo) }}</td>
-                                <td>{{ $mutation->created_at->diffForHumans() }}</td>
+                                <td class="text-muted">{{ $mutation->created_at->diffForHumans() }}</td>
                             </tr>
                         @empty
                             <tr>
