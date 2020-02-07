@@ -1,20 +1,33 @@
-## Tentang E-Koperasi
+## E-COOPERATIVE
 
-Sitem yang memanajemen setoran dan penarikan tabungan dengan jenis Tabungan Sukarela dengan bunga sebesar 6 persen per tahun.
+Deposit and withdrawal management application with the type of Voluntary Savings with an interest of 6% per year.
 
-## Instalasi
+## Installation
 
-- Clone atau download project
-- Install Dependencies dengan Composer, jalankan perintah `composer install`
-- Mendefinisikan environment, jalankan perintah `cp .env.example .env`
-- Generate key, jalankan perintah `php artisan key:generate`
-- Migrasi Database, jalankan perintah `php artisan migrate`
-- Membuat contoh data, jalankan perintah `php artisan db:seed`
-- Menjalankan aplikasi, jalankan perintah `php artisan serve`
+- Clone or download the project
+- Install Dependencies with Composer `composer install`
+- Copy environment `cp .env.example .env`
+- Generate key `php artisan key:generate`
+- Create database, for example `cooperative` and then change the DB_DATABASE value in .env
+- Migrate database `php artisan migrate`
+- Insert dummy data `php artisan db:seed`
+- Run app `php artisan serve`
 
-## Kredensial
+## Usage
+
+Default credential
 
 ```
 Email : ekoperasi@gmail.com
 Password : secret
 ```
+
+## Screenshots
+
+![Login](./screenshots/Login.png)
+
+![Home](./screenshots/Home.png)
+
+![Home](./screenshots/Bank%20Interest.png)
+
+More [screenshots](./screenshots)
