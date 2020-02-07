@@ -14,8 +14,8 @@ class CreateRiwayatTabunganTable extends Migration
     public function up()
     {
         Schema::create('riwayat_tabungan', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('anggota_id')->unsigned();
+            $table->bigIncrements('id');
+            $table->unsignedBigInteger('anggota_id');
             $table->date('tanggal')->nullable();
             $table->string('keterangan')->nullable();
             $table->bigInteger('debet')->nullable();

@@ -14,8 +14,8 @@ class CreateSetoranTable extends Migration
     public function up()
     {
         Schema::create('setoran', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('anggota_id')->unsigned();
+            $table->bigIncrements('id');
+            $table->unsignedBigInteger('anggota_id');
             $table->bigInteger('jumlah')->nullable();
             $table->string('keterangan')->nullable();
             $table->timestamps();

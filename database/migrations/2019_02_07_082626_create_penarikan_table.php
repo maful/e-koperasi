@@ -14,8 +14,8 @@ class CreatePenarikanTable extends Migration
     public function up()
     {
         Schema::create('penarikan', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('anggota_id')->unsigned();
+            $table->bigIncrements('id');
+            $table->unsignedBigInteger('anggota_id');
             $table->bigInteger('jumlah')->nullable();
             $table->integer('biaya_administrasi')->nullable();
             $table->string('keterangan')->nullable();

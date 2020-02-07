@@ -14,8 +14,8 @@ class CreateBungaTabunganTable extends Migration
     public function up()
     {
         Schema::create('bunga_tabungan', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('anggota_id')->unsigned();
+            $table->bigIncrements('id');
+            $table->unsignedBigInteger('anggota_id');
             $table->integer('bulan')->nullable();
             $table->bigInteger('saldo_terendah')->nullable();
             $table->tinyInteger('suku_bunga')->nullable();

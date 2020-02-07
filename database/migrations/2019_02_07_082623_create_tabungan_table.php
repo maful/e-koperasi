@@ -14,8 +14,8 @@ class CreateTabunganTable extends Migration
     public function up()
     {
         Schema::create('tabungan', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('anggota_id')->unsigned();
+            $table->bigIncrements('id');
+            $table->unsignedBigInteger('anggota_id');
             $table->bigInteger('saldo')->nullable();
             $table->timestamps();
 
