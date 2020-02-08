@@ -5,13 +5,13 @@
     <div class="col-5">
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">{{ __('calculate') }} {{ __('savings_interest') }}</h3>
+                <h3 class="card-title" id="savings_interest_calculate_desc">{{ __('calculate') }} {{ __('savings_interest') }}</h3>
                 <div class="card-options">
                     <a href="{{ url('/bankinterests') }}" class="btn btn-sm btn-pill btn-secondary"><i class="fe fe-arrow-left mr-2" aria-hidden="true"></i>{{ __('back') }}</a>
                 </div>
             </div>
             <div class="card-body">
-                <table class="table card-table mt-5" summary="{{ __('calculate') }} {{ __('savings_interest') }}">
+                <table class="table card-table mt-5" aria-describedby="savings_interest_calculate_desc">
                     <tbody>
                         <tr>
                             <td style="width: 25%;" class="font-weight-bold text-muted">{{ __('nin') }}</td>

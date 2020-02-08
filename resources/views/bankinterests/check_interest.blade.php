@@ -1,7 +1,7 @@
 <div class="card mt-3">
     <div class="card-status bg-green"></div>
     <div class="card-header">
-        <h3 class="card-title">{{ __('result') }} {{ __('savings_interest') }}</h3>
+        <h3 class="card-title" id="savings_interest_result_desc">{{ __('result') }} {{ __('savings_interest') }}</h3>
         <div class="card-options">
             <a href="#" class="card-options-remove" data-toggle="card-remove"><i class="fe fe-x" aria-hidden="true"></i></a>
         </div>
@@ -17,7 +17,7 @@
                     Bunga sudah ditambahkan ke saldo
                 </div>
             @endif
-            <table class="table card-table" summary="{{ __('result') }} {{ __('savings_interest') }}">
+            <table class="table card-table" aria-describedby="savings_interest_result_desc">
                 <tbody>
                     <tr>
                         <td style="width: 40%;" class="font-weight-bold text-muted">Periode</td>

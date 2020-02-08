@@ -1,10 +1,10 @@
 <div class="card">
     <div class="card-header">
-        <h3 class="card-title">{{ __('result') }}</h3>
+        <h3 class="card-title" id="mutation_result_desc">{{ __('result') }}</h3>
     </div>
     <div class="card-body">
         <div class="table-responsive">
-            <table class="table card-table table-vcenter text-nowrap" summary="{{ __('result') }}">
+            <table class="table card-table table-vcenter text-nowrap" aria-describedby="mutation_result_desc">
                 <thead>
                     <tr>
                         <th scope="col" class="w-1">No.</th>
@@ -33,7 +33,7 @@
         </div>
 
         @if ($savings_history->count() > 0)
-            <table class="table card-table mt-5" summary="Total {{ __('result') }}">
+            <table class="table card-table mt-5" aria-describedby="mutation_result_desc">
                 <tbody>
                     <tr>
                         <td style="width: 20%;" class="font-weight-bold text-muted">Total {{ __('credit') }}</td>

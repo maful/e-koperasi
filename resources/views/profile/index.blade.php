@@ -5,7 +5,7 @@
         <div class="col-8 offset-md-2">
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">{{ __('menu.profile') }}</h3>
+                <h3 class="card-title" id="profile_desc">{{ __('menu.profile') }}</h3>
                 <div class="card-options">
                     <a href="{{ url('/profile/edit') }}" class="btn btn-sm btn-pill btn-secondary">{{ __('edit') }}</a>
                 </div>
@@ -18,7 +18,7 @@
                         {{ session('success') }}
                     </div>
                 @endif
-                <table class="table card-table" summary="{{ __('menu.profile') }}">
+                <table class="table card-table" aria-describedby="profile_desc">
                     <tbody>
                         <tr>
                             <td style="width: 25%;" class="text-muted">{{ __('full_name') }}</td>

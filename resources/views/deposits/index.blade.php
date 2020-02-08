@@ -5,7 +5,7 @@
     <div class="col-12">
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">Data {{ __('menu.deposit') }}</h3>
+                <h3 class="card-title" id="deposit_desc">Data {{ __('menu.deposit') }}</h3>
                 <div class="card-options">
                     <a href="{{ route('deposits.create') }}" class="btn btn-sm btn-pill btn-primary">{{ __('add') }} {{ __('menu.deposit') }}</a>
                 </div>
@@ -20,7 +20,7 @@
                 @endif
 
                 <div class="table-responsive">
-                    <table class="table card-table table-vcenter text-nowrap" id="datatable" summary="Data {{ __('menu.deposit') }}">
+                    <table class="table card-table table-vcenter text-nowrap" id="datatable" aria-describedby="deposit_desc">
                         <thead>
                             <tr>
                                 <th scope="col" class="w-1">No.</th>
