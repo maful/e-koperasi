@@ -7,10 +7,10 @@
     <div class="col-12">
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">{{ __('recent_mutations_today') }}</h3>
+                <h3 class="card-title" id="recent_mutations_today_desc">{{ __('recent_mutations_today') }}</h3>
             </div>
             <div class="table-responsive">
-                <table class="table card-table table-vcenter text-nowrap datatable" summary="{{ __('recent_mutations_today') }}">
+                <table class="table card-table table-vcenter text-nowrap datatable" aria-describedby="recent_mutations_today_desc">
                     <thead>
                         <tr>
                             <th scope="col" class="w-1">No.</th>
