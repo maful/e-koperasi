@@ -69,6 +69,9 @@ if ( ! function_exists('month_id'))
             case '12':
                 $month = 'Desember';
                 break;
+            default:
+                $month = '-';
+                break;
         }
         return $month;
     }
