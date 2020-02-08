@@ -25,6 +25,7 @@
     "password": "Kata Sandi",
     "lowest_balance": "Saldo Terendah",
     "interest": "Bunga",
+    "interest_rate": "Suku Bunga / tahun",
 
     "save": "Simpan",
     "add": "Tambah",

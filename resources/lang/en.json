@@ -25,6 +25,7 @@
     "password": "Password",
     "lowest_balance": "Lowest Balance",
     "interest": "Interest",
+    "interest_rate": "Interest Rate / year",
 
     "save": "Save",
     "add": "Add",
