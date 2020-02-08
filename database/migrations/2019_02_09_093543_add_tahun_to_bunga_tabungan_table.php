@@ -26,7 +26,7 @@ class AddTahunToBungaTabunganTable extends Migration
     public function down()
     {
         Schema::table('bunga_tabungan', function (Blueprint $table) {
-            //
+            $table->dropColumn('tahun');
         });
     }
 }

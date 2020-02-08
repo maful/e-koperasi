@@ -14,7 +14,7 @@ class AnggotaTableSeeder extends Seeder
     {
         DB::statement('SET FOREIGN_KEY_CHECKS=0;');
         DB::table('anggota')->truncate();
-        $members = factory(App\Models\Member::class, 20)->create();
+        factory(App\Models\Member::class, 20)->create();
         DB::statement('SET FOREIGN_KEY_CHECKS=1;');
     }
 }
