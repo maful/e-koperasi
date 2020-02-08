@@ -1,6 +1,6 @@
 <div class="card">
     <div class="card-header">
-        <h3 class="card-title">Hasil Mutasi</h3>
+        <h3 class="card-title">{{ __('result') }}</h3>
     </div>
     <div class="card-body">
         <div class="table-responsive">
@@ -8,11 +8,11 @@
                 <thead>
                     <tr>
                         <th class="w-1">No.</th>
-                        <th>Tanggal</th>
-                        <th>Keterangan</th>
-                        <th class="text-right">Debet</th>
-                        <th class="text-right">Kredit</th>
-                        <th class="text-right">Saldo</th>
+                        <th>{{ __('date') }}</th>
+                        <th>{{ __('note') }}</th>
+                        <th class="text-right">{{ __('debit') }}</th>
+                        <th class="text-right">{{ __('credit') }}</th>
+                        <th class="text-right">{{ __('balance') }}</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -36,15 +36,15 @@
             <table class="table card-table mt-5">
                 <tbody>
                     <tr>
-                        <td style="width: 20%;" class="font-weight-bold text-muted">Total Kredit</td>
+                        <td style="width: 20%;" class="font-weight-bold text-muted">Total {{ __('credit') }}</td>
                         <td>{{ format_rupiah($total_credit) }}</td>
                     </tr>
                     <tr>
-                        <td class="font-weight-bold text-muted">Total Debet</td>
+                        <td class="font-weight-bold text-muted">Total {{ __('debit') }}</td>
                         <td>{{ format_rupiah($total_debet) }}</td>
                     </tr>
                     <tr>
-                        <td class="font-weight-bold text-muted">Saldo Akhir</td>
+                        <td class="font-weight-bold text-muted">{{ __('balance') }}</td>
                         <td>{{ format_rupiah($balance->saldo) }}</td>
                     </tr>
                 </tbody>

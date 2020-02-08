@@ -5,18 +5,18 @@
     <div class="col-12">
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">Hitung Bunga Tabungan</h3>
+                <h3 class="card-title">{{ __('calculate') }} {{ __('savings_interest') }}</h3>
             </div>
             <div class="table-responsive">
                 <table class="table card-table table-vcenter text-nowrap" id="datatable">
                     <thead>
                         <tr>
                             <th class="w-1">No.</th>
-                            <th>NIK</th>
-                            <th>Nama</th>
-                            <th>Pekerjaan</th>
-                            <th>No. Telp</th>
-                            <th>Saldo</th>
+                            <th>{{ __('nin') }}</th>
+                            <th>{{ __('full_name') }}</th>
+                            <th>{{ __('profession') }}</th>
+                            <th>{{ __('phone') }}</th>
+                            <th>{{ __('balance') }}</th>
                             <th></th>
                         </tr>
                     </thead>

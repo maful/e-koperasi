@@ -2,9 +2,10 @@
     <div class="container">
         <div class="d-flex">
             <a class="header-brand" href="{{ route('home') }}">
-                E-Koperasi
+                {{ __('app_name') }}
             </a>
             <div class="d-flex order-lg-2 ml-auto">
+                @include('shared.lang')
                 <div class="dropdown">
                     <a href="#" class="nav-link pr-0 leading-none" data-toggle="dropdown">
                     <span class="avatar" style="background-image: url(https://randomuser.me/api/portraits/men/43.jpg)"></span>
@@ -15,7 +16,7 @@
                     </a>
                     <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
                         <a class="dropdown-item" href="{{ url('profile') }}">
-                            <i class="dropdown-icon fe fe-user"></i> Profile
+                            <i class="dropdown-icon fe fe-user"></i> {{ __('menu.profile') }}
                         </a>
                     </div>
                 </div>
@@ -35,28 +36,28 @@
             <div class="col-lg order-lg-first">
                 <ul class="nav nav-tabs border-0 flex-column flex-lg-row">
                     <li class="nav-item">
-                        <a href="{{ route('home') }}" class="nav-link"><i class="fe fe-home"></i> Beranda</a>
+                        <a href="{{ route('home') }}" class="nav-link"><i class="fe fe-home"></i> {{ __('menu.home') }}</a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{ route('members.index') }}" class="nav-link"><i class="fe fe-users"></i> Anggota</a>
+                        <a href="{{ route('members.index') }}" class="nav-link"><i class="fe fe-users"></i> {{ __('menu.member') }}</a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{ route('deposits.index') }}" class="nav-link"><i class="fe fe-dollar-sign"></i> Setoran</a>
+                        <a href="{{ route('deposits.index') }}" class="nav-link"><i class="fe fe-dollar-sign"></i> {{ __('menu.deposit') }}</a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{ route('withdrawals.index') }}" class="nav-link"><i class="fe fe-hash"></i> Withdraw</a>
+                        <a href="{{ route('withdrawals.index') }}" class="nav-link"><i class="fe fe-hash"></i> {{ __('menu.withdrawal') }}</a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{ url('mutations') }}" class="nav-link"><i class="fe fe-printer"></i> List Mutasi</a>
+                        <a href="{{ url('mutations') }}" class="nav-link"><i class="fe fe-printer"></i> {{ __('menu.mutation') }}</a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{ url('bankinterests') }}" class="nav-link"><i class="fe fe-box"></i> Hitung Bunga</a>
+                        <a href="{{ url('bankinterests') }}" class="nav-link"><i class="fe fe-box"></i> {{ __('menu.interest') }}</a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{ url('profile') }}" class="nav-link"><i class="fe fe-user"></i> Profil</a>
+                        <a href="{{ url('profile') }}" class="nav-link"><i class="fe fe-user"></i> {{ __('menu.profile') }}</a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{ route('logout') }}" class="nav-link" onclick="event.preventDefault();document.getElementById('logout-form').submit();"><i class="fe fe-log-out"></i> Keluar</a>
+                        <a href="{{ route('logout') }}" class="nav-link" onclick="event.preventDefault();document.getElementById('logout-form').submit();"><i class="fe fe-log-out"></i> {{ __('menu.logout') }}</a>
 
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                             @csrf

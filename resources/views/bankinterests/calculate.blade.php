@@ -5,24 +5,24 @@
     <div class="col-5">
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">Hitung Bunga Tabungan</h3>
+                <h3 class="card-title">{{ __('calculate') }} {{ __('savings_interest') }}</h3>
                 <div class="card-options">
-                    <a href="{{ url('/bankinterests') }}" class="btn btn-sm btn-pill btn-secondary"><i class="fe fe-arrow-left mr-2"></i>Kembali</a>
+                    <a href="{{ url('/bankinterests') }}" class="btn btn-sm btn-pill btn-secondary"><i class="fe fe-arrow-left mr-2"></i>{{ __('back') }}</a>
                 </div>
             </div>
             <div class="card-body">
                 <table class="table card-table mt-5">
                     <tbody>
                         <tr>
-                            <td style="width: 25%;" class="font-weight-bold text-muted">NIK</td>
+                            <td style="width: 25%;" class="font-weight-bold text-muted">{{ __('nin') }}</td>
                             <td>{{ $member->nik }}</td>
                         </tr>
                         <tr>
-                            <td class="font-weight-bold text-muted">Nama</td>
+                            <td class="font-weight-bold text-muted">{{ __('full_name') }}</td>
                             <td>{{ $member->nama }}</td>
                         </tr>
                         <tr>
-                            <td class="font-weight-bold text-muted">Saldo</td>
+                            <td class="font-weight-bold text-muted">{{ __('balance') }}</td>
                             <td>{{ $member->balance ? format_rupiah($member->balance->saldo) : '0' }}</td>
                         </tr>
                     </tbody>
@@ -39,7 +39,7 @@
                                             <input type="text" id="onlyear" name="year" autocomplete="off" class="form-control" required placeholder="Tahun">
                                         </div>
                                         <div class="col-md-5">
-                                            <button id="btn-check-interest" class="btn btn-primary">Cek Bunga</button>
+                                            <button id="btn-check-interest" class="btn btn-primary">{{ __('calculate') }}</button>
                                         </div>
                                     </div>
                                 </td>
@@ -56,9 +56,9 @@
     <div class="col">
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">Riwayat Bunga Tabungan</h3>
+                <h3 class="card-title">{{ __('history') }} {{ __('savings_interest') }}</h3>
                 <div class="card-options">
-                    <a href="javascript:void(0)" id="reload-table" class="btn btn-sm btn-pill btn-secondary"><i class="fe fe-refresh-cw mr-2"></i>Refresh</a>
+                    <a href="javascript:void(0)" id="reload-table" class="btn btn-sm btn-pill btn-secondary"><i class="fe fe-refresh-cw mr-2"></i>{{ __('refresh') }}</a>
                 </div>
             </div>
             <div class="table-responsive">
@@ -67,8 +67,8 @@
                         <tr>
                             <th class="w-1">No.</th>
                             <th>Periode</th>
-                            <th>Saldo Terendah</th>
-                            <th>Bunga</th>
+                            <th>{{ __('lowest_balance') }}</th>
+                            <th>{{ __('interest') }}</th>
                         </tr>
                     </thead>
                 </table>
@@ -121,7 +121,7 @@ require(['datatables', 'jquery'], function(datatable, $) {
             { data: 'nominal_bunga', name: 'nominal_bunga' },
         ],
         language: {
-            "url": 'https://cdn.datatables.net/plug-ins/1.10.19/i18n/Indonesian.json'
+            "url": '{{ lang_url() }}'
         },
         columnDefs: [
             {

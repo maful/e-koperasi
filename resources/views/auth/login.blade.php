@@ -14,7 +14,7 @@
 
                         <div class="card-body p-6">
                             <div class="form-group">
-                                <label class="form-label">Email address</label>
+                                <label class="form-label">Email</label>
                                 <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
                                 @if ($errors->has('email'))
                                     <span class="invalid-feedback">{{ $errors->first('email') }}</span>
@@ -36,7 +36,7 @@
                                 </label>
                             </div>
                             <div class="form-footer">
-                                <button type="submit" class="btn btn-primary btn-block">Login</button>
+                                <button type="submit" class="btn btn-primary btn-block">{{ __('menu.login') }}</button>
                             </div>
                         </div>
                     </form>

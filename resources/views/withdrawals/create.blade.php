@@ -5,9 +5,9 @@
     <div class="col-10 offset-md-1">
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">Tambah Penarikan</h3>
+                <h3 class="card-title">{{ __('add') }} {{ __('menu.withdrawal') }}</h3>
                 <div class="card-options">
-                    <a href="{{ route('withdrawals.index') }}" class="btn btn-sm btn-pill btn-secondary">Kembali</a>
+                    <a href="{{ route('withdrawals.index') }}" class="btn btn-sm btn-pill btn-secondary">{{ __('back') }}</a>
                 </div>
             </div>
             <form action="{{ route('withdrawals.store') }}" method="POST">
@@ -23,10 +23,10 @@
 
                     <div class="form-group">
                         <div class="row align-items-center">
-                            <label class="col-sm-2">Anggota</label>
+                            <label class="col-sm-2">{{ __('menu.member') }}</label>
                             <div class="col-sm-10">
                                 <select class="form-control{{ $errors->has('anggota') ? ' is-invalid' : '' }}" id="select2" name="anggota">
-                                    <option value="">-- Pilih Anggota --</option>
+                                    <option value="">-- {{ __('menu.member') }} --</option>
                                     @foreach ($members as $member)
                                         <option value="{{ $member->id }}" {!! (old('anggota') == $member->id ? "selected=\"selected\"" : "") !!}>{{ $member->nama }} - {{ $member->nik }}</option>
                                     @endforeach
@@ -39,7 +39,7 @@
                     </div>
                     <div class="form-group">
                         <div class="row align-items-center">
-                            <label class="col-sm-2">Jumlah Penarikan</label>
+                            <label class="col-sm-2">{{ __('amount') }}</label>
                             <div class="col-sm-10">
                                 <div class="input-group">
                                     <span class="input-group-prepend">
@@ -55,7 +55,7 @@
                     </div>
                     <div class="form-group">
                         <div class="row align-items-center">
-                            <label class="col-sm-2">Keterangan</label>
+                            <label class="col-sm-2">{{ __('note') }}</label>
                             <div class="col-sm-10">
                                 <input type="text" name="keterangan" autocomplete="off" class="form-control{{ $errors->has('keterangan') ? ' is-invalid' : '' }}" value="{{ old('keterangan') }}">
                                 @if ($errors->has('keterangan'))
@@ -66,7 +66,7 @@
                     </div>
                 </div>
                 <div class="card-footer text-right">
-                    <button type="submit" class="btn btn-primary">Tambah Penarikan</button>
+                    <button type="submit" class="btn btn-primary">{{ __('add') }} {{ __('menu.withdrawal') }}</button>
                 </div>
             </form>
         </div>

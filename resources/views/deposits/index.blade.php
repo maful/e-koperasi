@@ -5,9 +5,9 @@
     <div class="col-12">
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">Data Setoran</h3>
+                <h3 class="card-title">Data {{ __('menu.deposit') }}</h3>
                 <div class="card-options">
-                    <a href="{{ route('deposits.create') }}" class="btn btn-sm btn-pill btn-primary">Tambah Setoran</a>
+                    <a href="{{ route('deposits.create') }}" class="btn btn-sm btn-pill btn-primary">{{ __('add') }} {{ __('menu.deposit') }}</a>
                 </div>
             </div>
             <div class="card-body">
@@ -24,10 +24,10 @@
                         <thead>
                             <tr>
                                 <th class="w-1">No.</th>
-                                <th>Anggota</th>
-                                <th>Jumlah</th>
-                                <th>Keterangan</th>
-                                <th>Tanggal</th>
+                                <th>{{ __('menu.member') }}</th>
+                                <th>{{ __('amount') }}</th>
+                                <th>{{ __('note') }}</th>
+                                <th>{{ __('date') }}</th>
                                 <th></th>
                             </tr>
                         </thead>
@@ -55,7 +55,7 @@ require(['datatables', 'jquery'], function(datatable, $) {
             { data: 'action', name: 'action', orderable: false, searchable: false },
         ],
         language: {
-            "url": 'https://cdn.datatables.net/plug-ins/1.10.19/i18n/Indonesian.json'
+            "url": '{{ lang_url() }}'
         },
         columnDefs: [
             {

@@ -7,19 +7,19 @@
     <div class="col-12">
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">5 Mutasi Terbaru Hari Ini</h3>
+                <h3 class="card-title">{{ __('recent_mutations_today') }}</h3>
             </div>
             <div class="table-responsive">
                 <table class="table card-table table-vcenter text-nowrap datatable">
                     <thead>
                         <tr>
                             <th class="w-1">No.</th>
-                            <th>Anggota</th>
-                            <th>Tanggal</th>
-                            <th>Keterangan</th>
-                            <th class="text-right">Debet</th>
-                            <th class="text-right">Kredit</th>
-                            <th class="text-right">Saldo</th>
+                            <th>{{ __('member') }}</th>
+                            <th>{{ __('date') }}</th>
+                            <th>{{ __('note') }}</th>
+                            <th class="text-right">{{ __('debit') }}</th>
+                            <th class="text-right">{{ __('credit') }}</th>
+                            <th class="text-right">{{ __('balance') }}</th>
                             <th></th>
                         </tr>
                     </thead>
@@ -42,7 +42,7 @@
                             </tr>
                         @empty
                             <tr>
-                                <td colspan="7">Data tidak ditemukan.</td>
+                                <td colspan="7">{{ __('data_not_found') }}</td>
                             </tr>
                         @endforelse
                     </tbody>

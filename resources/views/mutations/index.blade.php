@@ -5,16 +5,16 @@
     <div class="col-12">
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">Cek Mutasi</h3>
+                <h3 class="card-title">{{ __('menu.mutation') }}</h3>
             </div>
             <form>
                 <div class="card-body">
                     <div class="form-group">
                         <div class="row align-items-center">
-                            <label class="col-sm-2">Anggota</label>
+                            <label class="col-sm-2">{{ __('menu.member') }}</label>
                             <div class="col-sm-10">
                                 <select class="form-control{{ $errors->has('anggota') ? ' is-invalid' : '' }}" id="select2" name="anggota">
-                                    <option value="">-- Pilih Anggota --</option>
+                                    <option value="">-- {{ __('menu.member') }} --</option>
                                     @foreach ($members as $member)
                                         <option value="{{ $member->id }}" {!! (old('anggota') == $member->id ? "selected=\"selected\"" : "") !!}>{{ $member->nama }} - {{ $member->nik }}</option>
                                     @endforeach
@@ -27,7 +27,7 @@
                     </div>
                 </div>
                 <div class="card-footer text-right">
-                    <button id="btn-check-mutations" class="btn btn-primary">Cek Mutasi</button>
+                    <button id="btn-check-mutations" class="btn btn-primary">{{ __('check') }} {{ __('menu.mutation') }}</button>
                 </div>
             </form>
         </div>

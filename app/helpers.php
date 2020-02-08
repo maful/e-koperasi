@@ -73,3 +73,14 @@ if ( ! function_exists('month_id'))
         return $month;
     }
 }
+
+if ( ! function_exists('lang_url')) {
+    function lang_url()
+    {
+        $locale = session('locale');
+
+        return $locale == 'en'
+            ? 'https://cdn.datatables.net/plug-ins/1.10.19/i18n/English.json'
+            : 'https://cdn.datatables.net/plug-ins/1.10.19/i18n/Indonesian.json';
+    }
+}

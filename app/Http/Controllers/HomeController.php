@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\SavingHistory;
+use Illuminate\Support\Facades\App;
 
 class HomeController extends Controller
 {
@@ -30,5 +30,12 @@ class HomeController extends Controller
                                     ->get();
 
         return view('home', compact('mutations'));
+    }
+
+    public function lang($locale)
+    {
+        App::setLocale($locale);
+        session(['locale' => $locale]);
+        return redirect()->back();
     }
 }
