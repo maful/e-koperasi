@@ -56,13 +56,13 @@
     <div class="col">
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">{{ __('history') }} {{ __('savings_interest') }}</h3>
+                <h3 class="card-title" id="savings_interest_history_desc">{{ __('history') }} {{ __('savings_interest') }}</h3>
                 <div class="card-options">
                     <a href="javascript:void(0)" id="reload-table" class="btn btn-sm btn-pill btn-secondary"><i class="fe fe-refresh-cw mr-2" aria-hidden="true"></i>{{ __('refresh') }}</a>
                 </div>
             </div>
             <div class="table-responsive">
-                <table class="table card-table table-vcenter text-nowrap" id="datatable">
+                <table class="table card-table table-vcenter text-nowrap" id="datatable" aria-describedby="savings_interest_history_desc">
                     <thead>
                         <tr>
                             <th scope="col" class="w-1">No.</th>
