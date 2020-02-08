@@ -7,7 +7,7 @@
             <div class="row">
                 <div class="col col-login mx-auto">
                     <div class="text-center mb-6">
-                        <div class="display-4 font-weight-bold">E-Koperasi</div>
+                        <div class="display-4 font-weight-bold">{{ __('app_name') }}</div>
                     </div>
                     <form class="card" method="POST" action="{{ route('login') }}">
                         @csrf
