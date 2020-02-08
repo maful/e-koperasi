@@ -16,7 +16,7 @@
                     </a>
                     <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
                         <a class="dropdown-item" href="{{ url('profile') }}">
-                            <i class="dropdown-icon fe fe-user"></i> {{ __('menu.profile') }}
+                            <i class="dropdown-icon fe fe-user" aria-hidden="true"></i> {{ __('menu.profile') }}
                         </a>
                     </div>
                 </div>
@@ -36,28 +36,28 @@
             <div class="col-lg order-lg-first">
                 <ul class="nav nav-tabs border-0 flex-column flex-lg-row">
                     <li class="nav-item">
-                        <a href="{{ route('home') }}" class="nav-link"><i class="fe fe-home"></i> {{ __('menu.home') }}</a>
+                        <a href="{{ route('home') }}" class="nav-link"><i class="fe fe-home" aria-hidden="true"></i> {{ __('menu.home') }}</a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{ route('members.index') }}" class="nav-link"><i class="fe fe-users"></i> {{ __('menu.member') }}</a>
+                        <a href="{{ route('members.index') }}" class="nav-link"><i class="fe fe-users" aria-hidden="true"></i> {{ __('menu.member') }}</a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{ route('deposits.index') }}" class="nav-link"><i class="fe fe-dollar-sign"></i> {{ __('menu.deposit') }}</a>
+                        <a href="{{ route('deposits.index') }}" class="nav-link"><i class="fe fe-dollar-sign" aria-hidden="true"></i> {{ __('menu.deposit') }}</a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{ route('withdrawals.index') }}" class="nav-link"><i class="fe fe-hash"></i> {{ __('menu.withdrawal') }}</a>
+                        <a href="{{ route('withdrawals.index') }}" class="nav-link"><i class="fe fe-hash" aria-hidden="true"></i> {{ __('menu.withdrawal') }}</a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{ url('mutations') }}" class="nav-link"><i class="fe fe-printer"></i> {{ __('menu.mutation') }}</a>
+                        <a href="{{ url('mutations') }}" class="nav-link"><i class="fe fe-printer" aria-hidden="true"></i> {{ __('menu.mutation') }}</a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{ url('bankinterests') }}" class="nav-link"><i class="fe fe-box"></i> {{ __('menu.interest') }}</a>
+                        <a href="{{ url('bankinterests') }}" class="nav-link"><i class="fe fe-box" aria-hidden="true"></i> {{ __('menu.interest') }}</a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{ url('profile') }}" class="nav-link"><i class="fe fe-user"></i> {{ __('menu.profile') }}</a>
+                        <a href="{{ url('profile') }}" class="nav-link"><i class="fe fe-user" aria-hidden="true"></i> {{ __('menu.profile') }}</a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{ route('logout') }}" class="nav-link" onclick="event.preventDefault();document.getElementById('logout-form').submit();"><i class="fe fe-log-out"></i> {{ __('menu.logout') }}</a>
+                        <a href="{{ route('logout') }}" class="nav-link" onclick="event.preventDefault();document.getElementById('logout-form').submit();"><i class="fe fe-log-out" aria-hidden="true"></i> {{ __('menu.logout') }}</a>
 
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                             @csrf

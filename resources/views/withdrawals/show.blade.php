@@ -10,7 +10,7 @@
                     <a href="{{ route('withdrawals.index') }}" class="btn btn-sm btn-pill btn-secondary">{{ __('back') }}</a>
                 </div>
             </div>
-            <table class="table card-table">
+            <table class="table card-table" summary="{{ __('detail') }} {{ __('menu.withdrawal') }}">
                 <tbody>
                     <tr>
                         <td style="width: 25%;" class="text-muted">{{ __('menu.member') }}</td>

@@ -20,7 +20,7 @@
                 @endif
 
                 <div class="table-responsive">
-                    <table class="table card-table table-vcenter text-nowrap" id="datatable">
+                    <table class="table card-table table-vcenter text-nowrap" id="datatable" summary="Data {{ __('menu.withdrawal') }}">
                         <thead>
                             <tr>
                                 <th scope="col" class="w-1">No.</th>

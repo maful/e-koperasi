@@ -18,7 +18,7 @@
                         {{ session('success') }}
                     </div>
                 @endif
-                <table class="table card-table">
+                <table class="table card-table" summary="{{ __('menu.profile') }}">
                     <tbody>
                         <tr>
                             <td style="width: 25%;" class="text-muted">{{ __('full_name') }}</td>

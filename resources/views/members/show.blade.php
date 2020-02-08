@@ -11,7 +11,7 @@
                     <a class="btn btn-sm btn-pill btn-primary ml-2" href="{{ route('members.edit', $member->id) }}">{{ __('edit') }}</a>
                 </div>
             </div>
-            <table class="table card-table">
+            <table class="table card-table" summary="{{ __('detail') }} {{ __('menu.member') }}">
                 <tbody>
                     <tr>
                         <td style="width: 25%;" class="text-muted">{{ __('nin') }}</td>

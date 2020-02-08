@@ -1,9 +1,9 @@
 <div class="card mt-3">
     <div class="card-status bg-green"></div>
     <div class="card-header">
-        <h3 class="card-title">Hasil Perhitungan Bunga</h3>
+        <h3 class="card-title">{{ __('result') }} {{ __('savings_interest') }}</h3>
         <div class="card-options">
-            <a href="#" class="card-options-remove" data-toggle="card-remove"><i class="fe fe-x"></i></a>
+            <a href="#" class="card-options-remove" data-toggle="card-remove"><i class="fe fe-x" aria-hidden="true"></i></a>
         </div>
     </div>
     <div class="card-body">
@@ -17,29 +17,29 @@
                     Bunga sudah ditambahkan ke saldo
                 </div>
             @endif
-            <table class="table card-table">
+            <table class="table card-table" summary="{{ __('result') }} {{ __('savings_interest') }}">
                 <tbody>
                     <tr>
                         <td style="width: 40%;" class="font-weight-bold text-muted">Periode</td>
                         <td>{{ $periode }}</td>
                     </tr>
                     <tr>
-                        <td class="font-weight-bold text-muted">Saldo Terendah</td>
+                        <td class="font-weight-bold text-muted">{{ __('lowest_balance') }}</td>
                         <td>{{ format_rupiah($lowest_balance) }}</td>
                     </tr>
                     <tr>
-                        <td class="font-weight-bold text-muted">Suku Bunga/tahun</td>
+                        <td class="font-weight-bold text-muted">{{ __('interest_rate') }}</td>
                         <td>{{ $interest_rate }}%</td>
                     </tr>
                     <tr class="table-success">
-                        <td class="font-weight-bold text-muted">Bunga Tabungan</td>
+                        <td class="font-weight-bold text-muted">{{ __('interest') }}</td>
                         <td class="font-weight-bold">{{ format_rupiah($format_calculate_interest) }}</td>
                     </tr>
                     @if ($count_interest == 0)
                         <tr>
                             <td class="font-weight-bold text-muted">&nbsp;</td>
                             <td>
-                                <button id="btn-add-to-balance" class="btn btn-secondary"><i class="fe fe-save mr-2"></i>Tambah ke Saldo Tabungan</button>
+                                <button id="btn-add-to-balance" class="btn btn-secondary"><i class="fe fe-save mr-2" aria-hidden="true"></i>Tambah ke Saldo Tabungan</button>
                             </td>
                         </tr>
                     @endif

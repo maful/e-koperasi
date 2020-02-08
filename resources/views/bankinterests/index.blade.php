@@ -8,7 +8,7 @@
                 <h3 class="card-title">{{ __('calculate') }} {{ __('savings_interest') }}</h3>
             </div>
             <div class="table-responsive">
-                <table class="table card-table table-vcenter text-nowrap" id="datatable">
+                <table class="table card-table table-vcenter text-nowrap" id="datatable" summary="{{ __('calculate') }} {{ __('savings_interest') }}">
                     <thead>
                         <tr>
                             <th scope="col" class="w-1">No.</th>

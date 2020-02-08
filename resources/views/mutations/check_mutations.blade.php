@@ -4,7 +4,7 @@
     </div>
     <div class="card-body">
         <div class="table-responsive">
-            <table class="table card-table table-vcenter text-nowrap">
+            <table class="table card-table table-vcenter text-nowrap" summary="{{ __('result') }}">
                 <thead>
                     <tr>
                         <th scope="col" class="w-1">No.</th>
@@ -33,7 +33,7 @@
         </div>
 
         @if ($savings_history->count() > 0)
-            <table class="table card-table mt-5">
+            <table class="table card-table mt-5" summary="Total {{ __('result') }}">
                 <tbody>
                     <tr>
                         <td style="width: 20%;" class="font-weight-bold text-muted">Total {{ __('credit') }}</td>

@@ -7,11 +7,11 @@
             <div class="card-header">
                 <h3 class="card-title">{{ __('calculate') }} {{ __('savings_interest') }}</h3>
                 <div class="card-options">
-                    <a href="{{ url('/bankinterests') }}" class="btn btn-sm btn-pill btn-secondary"><i class="fe fe-arrow-left mr-2"></i>{{ __('back') }}</a>
+                    <a href="{{ url('/bankinterests') }}" class="btn btn-sm btn-pill btn-secondary"><i class="fe fe-arrow-left mr-2" aria-hidden="true"></i>{{ __('back') }}</a>
                 </div>
             </div>
             <div class="card-body">
-                <table class="table card-table mt-5">
+                <table class="table card-table mt-5" summary="{{ __('calculate') }} {{ __('savings_interest') }}">
                     <tbody>
                         <tr>
                             <td style="width: 25%;" class="font-weight-bold text-muted">{{ __('nin') }}</td>
@@ -58,7 +58,7 @@
             <div class="card-header">
                 <h3 class="card-title">{{ __('history') }} {{ __('savings_interest') }}</h3>
                 <div class="card-options">
-                    <a href="javascript:void(0)" id="reload-table" class="btn btn-sm btn-pill btn-secondary"><i class="fe fe-refresh-cw mr-2"></i>{{ __('refresh') }}</a>
+                    <a href="javascript:void(0)" id="reload-table" class="btn btn-sm btn-pill btn-secondary"><i class="fe fe-refresh-cw mr-2" aria-hidden="true"></i>{{ __('refresh') }}</a>
                 </div>
             </div>
             <div class="table-responsive">
