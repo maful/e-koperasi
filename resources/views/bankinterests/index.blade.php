@@ -11,13 +11,13 @@
                 <table class="table card-table table-vcenter text-nowrap" id="datatable">
                     <thead>
                         <tr>
-                            <th class="w-1">No.</th>
-                            <th>{{ __('nin') }}</th>
-                            <th>{{ __('full_name') }}</th>
-                            <th>{{ __('profession') }}</th>
-                            <th>{{ __('phone') }}</th>
-                            <th>{{ __('balance') }}</th>
-                            <th></th>
+                            <th scope="col" class="w-1">No.</th>
+                            <th scope="col">{{ __('nin') }}</th>
+                            <th scope="col">{{ __('full_name') }}</th>
+                            <th scope="col">{{ __('profession') }}</th>
+                            <th scope="col">{{ __('phone') }}</th>
+                            <th scope="col">{{ __('balance') }}</th>
+                            <th scope="col"></th>
                         </tr>
                     </thead>
                 </table>

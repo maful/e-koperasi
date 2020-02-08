@@ -7,12 +7,12 @@
             <table class="table card-table table-vcenter text-nowrap">
                 <thead>
                     <tr>
-                        <th class="w-1">No.</th>
-                        <th>{{ __('date') }}</th>
-                        <th>{{ __('note') }}</th>
-                        <th class="text-right">{{ __('debit') }}</th>
-                        <th class="text-right">{{ __('credit') }}</th>
-                        <th class="text-right">{{ __('balance') }}</th>
+                        <th scope="col" class="w-1">No.</th>
+                        <th scope="col">{{ __('date') }}</th>
+                        <th scope="col">{{ __('note') }}</th>
+                        <th scope="col" class="text-right">{{ __('debit') }}</th>
+                        <th scope="col" class="text-right">{{ __('credit') }}</th>
+                        <th scope="col" class="text-right">{{ __('balance') }}</th>
                     </tr>
                 </thead>
                 <tbody>

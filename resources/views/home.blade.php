@@ -13,14 +13,14 @@
                 <table class="table card-table table-vcenter text-nowrap datatable">
                     <thead>
                         <tr>
-                            <th class="w-1">No.</th>
-                            <th>{{ __('member') }}</th>
-                            <th>{{ __('date') }}</th>
-                            <th>{{ __('note') }}</th>
-                            <th class="text-right">{{ __('debit') }}</th>
-                            <th class="text-right">{{ __('credit') }}</th>
-                            <th class="text-right">{{ __('balance') }}</th>
-                            <th></th>
+                            <th scope="col" class="w-1">No.</th>
+                            <th scope="col">{{ __('member') }}</th>
+                            <th scope="col">{{ __('date') }}</th>
+                            <th scope="col">{{ __('note') }}</th>
+                            <th scope="col" class="text-right">{{ __('debit') }}</th>
+                            <th scope="col" class="text-right">{{ __('credit') }}</th>
+                            <th scope="col" class="text-right">{{ __('balance') }}</th>
+                            <th scope="col"></th>
                         </tr>
                     </thead>
                     <tbody>

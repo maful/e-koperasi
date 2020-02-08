@@ -23,12 +23,12 @@
                     <table class="table card-table table-vcenter text-nowrap" id="datatable">
                         <thead>
                             <tr>
-                                <th class="w-1">No.</th>
-                                <th>{{ __('menu.member') }}</th>
-                                <th>{{ __('amount') }}</th>
-                                <th>{{ __('note') }}</th>
-                                <th>{{ __('date') }}</th>
-                                <th></th>
+                                <th scope="col" class="w-1">No.</th>
+                                <th scope="col">{{ __('menu.member') }}</th>
+                                <th scope="col">{{ __('amount') }}</th>
+                                <th scope="col">{{ __('note') }}</th>
+                                <th scope="col">{{ __('date') }}</th>
+                                <th scope="col"></th>
                             </tr>
                         </thead>
                     </table>

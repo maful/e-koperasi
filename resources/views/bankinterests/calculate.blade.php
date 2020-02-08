@@ -65,10 +65,10 @@
                 <table class="table card-table table-vcenter text-nowrap" id="datatable">
                     <thead>
                         <tr>
-                            <th class="w-1">No.</th>
-                            <th>Periode</th>
-                            <th>{{ __('lowest_balance') }}</th>
-                            <th>{{ __('interest') }}</th>
+                            <th scope="col" class="w-1">No.</th>
+                            <th scope="col">Periode</th>
+                            <th scope="col">{{ __('lowest_balance') }}</th>
+                            <th scope="col">{{ __('interest') }}</th>
                         </tr>
                     </thead>
                 </table>
