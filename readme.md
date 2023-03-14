@@ -1,6 +1,6 @@
 ## E-COOPERATIVE
 
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=maful_e-koperasi&metric=alert_status)](https://sonarcloud.io/dashboard?id=maful_e-koperasi)
+> [Libur.run](https://github.com/maful/libur.run) - Empower Your HR with Next-Gen Open Source Self-Serve Platform
 
 Deposit and withdrawal management application with the type of Voluntary Savings with an interest of 6% per year.
 
